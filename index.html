@@ -8,16 +8,8 @@
     <!-- Chargement de Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Polices du thème -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
-    
-    <!-- Icônes (Font Awesome) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <style>
-        /* Configuration personnalisée de Tailwind */
+    <!-- Configuration de Tailwind (DOIT ÊTRE DANS UN SCRIPT) -->
+    <script>
         tailwind.config = {
             theme: {
                 extend: {
@@ -46,7 +38,17 @@
                 }
             }
         }
+    </script>
 
+    <!-- Polices du thème -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    
+    <!-- Icônes (Font Awesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
         /* Titres superposés */
         .hero-title-background {
             font-family: 'Teko', sans-serif;
@@ -195,12 +197,12 @@
 
             <!-- Colonne Image (SANS CADRE, POUR DÉTOURAGE) -->
             <div class="hero-image relative z-10 md:w-1/2 flex justify-center md:justify-end reveal-on-scroll" style="transition-delay: 600ms;">
-                <div class="relative w-full max-w-xl flex justify-center"> <!-- MODIFICATION ICI: max-w-xl pour élargir le conteneur -->
+                <div class="relative w-full max-w-xl flex justify-center">
                     <!-- Effet d'aura derrière le personnage -->
                     <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] bg-brand-accent/30 blur-[80px] rounded-full -z-10"></div>
                     
-                    <!-- Image : Assurez-vous d'utiliser un PNG transparent ici -->
-                    <img src="image_55fbaa.png" alt="Mohamed Elfene" class="w-auto h-[650px] object-contain relative z-10 drop-shadow-2xl image-mask hover:scale-105 transition-transform duration-700"> <!-- MODIFICATION ICI: h-[650px] pour augmenter la hauteur -->
+                    <!-- Image -->
+                    <img src="image_55fbaa.png" alt="Mohamed Elfene" class="w-auto h-[650px] object-contain relative z-10 drop-shadow-2xl image-mask hover:scale-105 transition-transform duration-700">
                 </div>
             </div>
         </div>
@@ -304,4 +306,246 @@
                 </div>
                 
                 <!-- Langues -->
-                <div
+                <div class="skills-category group">
+                    <h3 class="font-display text-3xl text-brand-accent border-b border-brand-border pb-4 mb-6 group-hover:border-brand-accent transition-colors" data-lang="skills-cat-3">Langues Parlées</h3>
+                    <ul class="list-none space-y-3">
+                        <li class="text-brand-secondary text-lg flex items-center transition-all duration-300 hover:text-brand-primary hover:translate-x-2"><span class="w-1.5 h-1.5 bg-brand-accent rounded-full mr-3"></span><span data-lang="skill-arabic">Arabe (Natif)</span></li>
+                        <li class="text-brand-secondary text-lg flex items-center transition-all duration-300 hover:text-brand-primary hover:translate-x-2"><span class="w-1.5 h-1.5 bg-brand-accent rounded-full mr-3"></span><span data-lang="skill-french">Français (C2)</span></li>
+                        <li class="text-brand-secondary text-lg flex items-center transition-all duration-300 hover:text-brand-primary hover:translate-x-2"><span class="w-1.5 h-1.5 bg-brand-accent rounded-full mr-3"></span><span data-lang="skill-english">Anglais (C1)</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 6. SECTION CONTACT ===== -->
+    <section id="contact" class="py-32 px-4 md:px-12">
+        <div class="max-w-3xl mx-auto text-center bg-brand-surface border border-brand-border rounded-xl p-12 md:p-20 reveal-on-scroll shadow-2xl relative overflow-hidden">
+            <!-- Effet de lumière arrière -->
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-2/3 h-1 bg-brand-accent shadow-[0_0_50px_20px_rgba(157,132,255,0.3)]"></div>
+            
+            <h2 class="font-display text-5xl md:text-7xl font-bold mb-8 uppercase relative z-10" data-lang="contact-title">Contact</h2>
+            <p class="text-xl md:text-2xl text-brand-secondary leading-relaxed mb-12 font-light relative z-10" data-lang="contact-text">
+                Intéressé par une collaboration ou un projet ?<br>
+                Contactez-moi par email.
+            </p>
+            <a href="mailto:Simoelfene71@gmail.com" class="relative z-10 inline-block font-display text-2xl md:text-3xl text-brand-primary no-underline border border-brand-accent/50 px-12 py-5 rounded hover:bg-brand-accent hover:text-brand-dark transition-all duration-300 hover:shadow-[0_0_30px_rgba(157,132,255,0.6)] hover:scale-105">
+                Simoelfene71@gmail.com
+            </a>
+        </div>
+    </section>
+
+    <!-- ===== 7. FOOTER ===== -->
+    <footer class="py-12 px-4 md:px-12 text-center border-t border-brand-border bg-brand-dark">
+        <div class="social-links mb-6">
+            <a href="https://github.com/Mohamedelf" target="_blank" class="text-brand-secondary hover:text-brand-accent text-2xl mx-6 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg inline-block"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/mohamed-e-17118122b/" target="_blank" class="text-brand-secondary hover:text-brand-accent text-2xl mx-6 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg inline-block"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <p class="text-brand-secondary text-sm tracking-widest uppercase opacity-60">&copy; 2025 Mohamed Elfene. Inspiré par le futur.</p>
+    </footer>
+
+    <!-- ===== MODAL PROJET ===== -->
+    <div id="project-modal" class="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-md hidden transition-opacity duration-300 opacity-0" onclick="closeModal()">
+        <div class="bg-brand-surface w-11/12 max-w-3xl rounded-xl border border-brand-border shadow-2xl p-8 md:p-12 relative transform scale-95 transition-transform duration-300" id="modal-content" onclick="event.stopPropagation()">
+            <button onclick="closeModal()" class="absolute top-6 right-6 text-brand-secondary hover:text-brand-primary text-4xl leading-none transition-colors">&times;</button>
+            
+            <h3 id="modal-title" class="font-display text-4xl md:text-5xl text-brand-accent mb-6 pr-10 uppercase">Titre du Projet</h3>
+            <p id="modal-description" class="text-lg text-brand-primary/80 leading-relaxed mb-8 font-light">Description détaillée...</p>
+            
+            <div class="border-t border-brand-border pt-8">
+                <h4 class="font-display text-2xl text-brand-primary mb-4 uppercase tracking-wide" data-lang="modal-tech">Technologies Utilisées</h4>
+                <div id="modal-tech" class="flex flex-wrap gap-3">
+                    <!-- Tags -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // --- 1. GESTION DES LANGUES (i18n) ---
+        let currentLang = 'fr'; // Langue par défaut
+
+        const translations = {
+            'fr': {
+                'nav-experience': 'Expérience',
+                'nav-projects': 'Projets',
+                'nav-skills': 'Compétences',
+                'nav-contact': 'Contact',
+                'nav-cv': 'Mon CV',
+                'hero-subtitle': 'Ingénierie Informatique | Big Data & IA',
+                'hero-about-title': 'À PROPOS DE MOI',
+                'hero-about-text': 'Étudiant en génie informatique spécialisé en Big Data et IA. Passionné par l\'automatisation, la résolution de problèmes et la création de produits numériques percutants. Reconnu pour mon esprit d\'équipe, ma capacité d\'adaptation et ma précision.',
+                'section-exp': 'Expérience en Vedette',
+                'section-exp-bg': 'EXPÉRIENCE',
+                'exp-role': 'Développeur Freelance',
+                'exp-date': 'Août 2025 – Présent',
+                'exp-desc': 'Conception et intégration de fonctionnalités, développement d\'API et automatisation des workflows pour les opérations commerciales.',
+                'section-projects': 'Projets',
+                'proj-1-title': 'Système de Gestion',
+                'proj-1-desc': 'Système de gestion en C utilisant des listes chaînées (ajout, suppression, recherche, affichage).',
+                'proj-2-title': 'Base de Données Relationnelle',
+                'proj-2-desc': 'Conception de schémas relationnels, écriture de requêtes SQL et optimisation de la gestion des données.',
+                'proj-3-title': 'Programmation Embarquée',
+                'proj-3-desc': 'Développement de programmes embarqués avec communication série et contrôle de composants.',
+                'proj-4-title': 'Interface Web',
+                'proj-4-desc': 'Création d\'un frontend interactif avec des événements utilisateur et un design dynamique.',
+                'section-skills': 'Compétences Techniques',
+                'skills-cat-1': 'Langages',
+                'skills-cat-2': 'Outils & Tech',
+                'skills-cat-3': 'Langues Parlées',
+                'skill-arabic': 'Arabe (Natif)',
+                'skill-french': 'Français (C2)',
+                'skill-english': 'Anglais (C1)',
+                'contact-title': 'Contact',
+                'contact-text': 'Intéressé par une collaboration ou un projet ?<br>Contactez-moi par email.',
+                'modal-tech': 'Technologies Utilisées'
+            },
+            'en': {
+                'nav-experience': 'Experience',
+                'nav-projects': 'Projects',
+                'nav-skills': 'Skills',
+                'nav-contact': 'Contact',
+                'nav-cv': 'My CV',
+                'hero-subtitle': 'Computer Engineering | Big Data & AI',
+                'hero-about-title': 'ABOUT ME',
+                'hero-about-text': 'Computer engineering student specializing in Big Data and AI. Passionate about automation, problem-solving, and building impactful digital products. Known for teamwork, adaptability, and precision.',
+                'section-exp': 'Featured Experience',
+                'section-exp-bg': 'EXPERIENCE',
+                'exp-role': 'Freelance Developer',
+                'exp-date': 'August 2025 – Present',
+                'exp-desc': 'Designed and integrated features, developed APIs, and automated workflows for business operations.',
+                'section-projects': 'Projects',
+                'proj-1-title': 'Management System',
+                'proj-1-desc': 'A C-based management system using linked lists (add, delete, search, display).',
+                'proj-2-title': 'Relational Database',
+                'proj-2-desc': 'Designed relational schemas, wrote SQL queries, and optimized data handling.',
+                'proj-3-title': 'Embedded Programming',
+                'proj-3-desc': 'Developed embedded programs with serial communication and component control.',
+                'proj-4-title': 'Web Interface',
+                'proj-4-desc': 'Created an interactive frontend with user events and dynamic design.',
+                'section-skills': 'Technical Skills',
+                'skills-cat-1': 'Languages',
+                'skills-cat-2': 'Tools & Tech',
+                'skills-cat-3': 'Spoken Languages',
+                'skill-arabic': 'Arabic (Native)',
+                'skill-french': 'French (C2)',
+                'skill-english': 'English (C1)',
+                'contact-title': 'Contact',
+                'contact-text': 'Interested in a collaboration or a project?<br>Contact me by email.',
+                'modal-tech': 'Technologies Used'
+            }
+        };
+
+        // Données détaillées des projets (Bilingue)
+        const projectDetails = {
+            'gestion-c': {
+                'fr': { title: 'Système de Gestion (C)', description: 'Développement d\'un système de gestion complet en langage C. Ce projet met l\'accent sur la manipulation de la mémoire et les structures de données fondamentales, utilisant des listes chaînées pour gérer les opérations CRUD sur les enregistrements.' },
+                'en': { title: 'Management System (C)', description: 'Development of a complete management system in C. This project emphasizes memory manipulation and fundamental data structures, using linked lists to handle CRUD operations on records.' },
+                tech: ['C', 'Linked Lists', 'Memory Management', 'Algorithms']
+            },
+            'mysql': {
+                'fr': { title: 'Base de Données (MySQL)', description: 'Conception et implémentation d\'une base de données relationnelle optimisée. Modélisation des données, création de schémas complexes, jointures et optimisation des performances.' },
+                'en': { title: 'Relational Database (MySQL)', description: 'Design and implementation of an optimized relational database. Data modeling, complex schema creation, joins, and performance optimization.' },
+                tech: ['MySQL', 'SQL', 'Database Design', 'Optimization']
+            },
+            'embarque': {
+                'fr': { title: 'Programmation Embarquée', description: 'Programmation de microcontrôleurs ESP32/Arduino. Mise en place de communication série (UART) et interfaçage avec capteurs et actionneurs pour des systèmes temps réel.' },
+                'en': { title: 'Embedded Programming', description: 'Programming ESP32/Arduino microcontrollers. Implementation of serial communication (UART) and interfacing with sensors and actuators for real-time systems.' },
+                tech: ['ESP32', 'Arduino', 'C/C++', 'IoT']
+            },
+            'web': {
+                'fr': { title: 'Interface Web', description: 'Création d\'un frontend moderne et réactif. Maîtrise de la structure sémantique HTML, du style avancé CSS et de la manipulation du DOM via JavaScript.' },
+                'en': { title: 'Web Interface', description: 'Creation of a modern and responsive frontend. Mastery of semantic HTML structure, advanced CSS styling, and DOM manipulation via JavaScript.' },
+                tech: ['HTML5', 'CSS3', 'JavaScript', 'Responsive UI']
+            }
+        };
+
+        function switchLanguage(lang) {
+            currentLang = lang;
+            
+            // Mettre à jour le style des boutons
+            document.getElementById('btn-fr').className = lang === 'fr' ? 'px-3 py-1 text-xs font-bold rounded-full bg-brand-primary text-brand-dark shadow-lg transition-all' : 'px-3 py-1 text-xs font-bold rounded-full text-brand-secondary hover:text-white transition-all';
+            document.getElementById('btn-en').className = lang === 'en' ? 'px-3 py-1 text-xs font-bold rounded-full bg-brand-primary text-brand-dark shadow-lg transition-all' : 'px-3 py-1 text-xs font-bold rounded-full text-brand-secondary hover:text-white transition-all';
+
+            // Mettre à jour tous les textes simples avec data-lang
+            document.querySelectorAll('[data-lang]').forEach(el => {
+                const key = el.getAttribute('data-lang');
+                if (translations[lang][key]) {
+                    el.innerHTML = translations[lang][key];
+                }
+            });
+        }
+
+        // Initialiser en Français par défaut
+        switchLanguage('fr');
+
+        // --- 2. GESTION DU MODAL ---
+        const modal = document.getElementById('project-modal');
+        const modalContent = document.getElementById('modal-content');
+
+        function openModal(projectId) {
+            const data = projectDetails[projectId];
+            if (!data) return;
+
+            const content = data[currentLang];
+            document.getElementById('modal-title').textContent = content.title;
+            document.getElementById('modal-description').textContent = content.description;
+            
+            const techContainer = document.getElementById('modal-tech');
+            techContainer.innerHTML = '';
+            data.tech.forEach(tag => {
+                const span = document.createElement('span');
+                span.className = 'bg-brand-dark border border-brand-border px-4 py-1 rounded-full text-sm text-brand-accent font-medium';
+                span.textContent = tag;
+                techContainer.appendChild(span);
+            });
+
+            modal.classList.remove('hidden');
+            // Petit délai pour l'animation d'opacité
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+                modalContent.classList.remove('scale-95');
+                modalContent.classList.add('scale-100');
+            }, 10);
+        }
+
+        function closeModal() {
+            modal.classList.add('opacity-0');
+            modalContent.classList.remove('scale-100');
+            modalContent.classList.add('scale-95');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
+        }
+
+        // --- 3. EFFETS DE SCROLL & PARALLAXE ---
+        document.addEventListener('DOMContentLoaded', () => {
+            // Observer pour l'apparition des éléments
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+    
+            document.querySelectorAll('.reveal-on-scroll').forEach(target => observer.observe(target));
+
+            // Barre de progression & Parallax
+            window.addEventListener('scroll', () => {
+                // Barre de progression
+                const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+                const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrollPercent = (scrollTop / scrollHeight) * 100;
+                document.getElementById('scroll-progress').style.width = scrollPercent + "%";
+
+                // Effet Parallax sur le titre Hero
+                const parallaxBg = document.getElementById('parallax-bg');
+                if (parallaxBg) {
+                    parallaxBg.style.transform = `translateY(${scrollTop * 0.4}px)`;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
